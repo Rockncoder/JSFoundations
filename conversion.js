@@ -22,4 +22,20 @@
   var myIntShort = + totalInt;
   console.info('myIntShort typeof ' + (typeof myIntShort));
 
+  var val1 = 120;
+  var val2 = 240;
+
+  // convert the sum of val1 + val2 to a string assigned to var str1
+  // use console.info to display the string and its type
+
 }());
+
+
+
+
+
+
+
+
+
+

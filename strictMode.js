@@ -3,10 +3,11 @@
 
 
 // unintentional global creation
-//bob = "monocles";
+
 
 // this is a function constructor
 function Point(x, y){
+//  bob = "monocles";
   this.x = x;
   this.y = y;
 }

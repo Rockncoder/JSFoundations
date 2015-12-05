@@ -4,7 +4,7 @@
   'use strict';
 
   var junk = [1, 2, 3, 4, 'Alpha', 5, {name: 'Jason'}];
-  var letters = ['A','B','C','D','E','F','G','H','I','J','K'];
+  var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
   var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
   console.log(nums);
 
@@ -21,7 +21,7 @@
 
   // filter iterates over the array and returns a new array with only the elements that pass the test
   var nums3 = nums.filter(function (elem) {
-    return elem % 2;
+    return !!(elem % 2);
   });
   console.log(nums3);
 
@@ -53,4 +53,40 @@
   // write code which iterates over the array, junk and sums up only the numbers
   // use the array methods
 
+  var junkSum = junk.reduce(function(previous, current){
+    if(typeof current === 'number') {
+      previous += current;
+    }
+    return previous;
+  }, 100);
+  console.info("Junk sum = " + junkSum);
+
+  //
+  // using the array, nums, sum the values of all numbers which are
+  // multiples of 3 or 5
+
+  var fizzBuzz = nums.reduce(function (previous, current) {
+    if (current % 3 == 0 || current % 5 == 0) {
+      previous += current;
+    }
+    return previous;
+  }, 0);
+
+  console.info("Fizzbuzz = " + fizzBuzz);
+
+  // write a map function which translates the nums array to the
+  // modulo 6 of each number in the array
+  // then display the array
+  var mod6 = nums.map(function (elem) {
+    return elem % 6;
+  });
+  console.log(mod6);
+
+
+
 }());
+
+
+
+
+

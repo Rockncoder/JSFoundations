@@ -63,6 +63,9 @@
 
   obj3.yoyo = "Duncan";
 
+  delete obj3.yoyo;
+
+
   var keyz, valz;
 
   for(keyz in obj3){
@@ -75,6 +78,7 @@
   };
 
 
+  debugger;
 
 
 

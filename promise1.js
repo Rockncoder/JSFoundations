@@ -39,4 +39,22 @@
   );
   console.info('Back from promise land');
 
+  // make another call to the sometimesWorks function
+  // create two named functions to pass to the promise object
+  // when successful call the itWorked function
+  //    display message passed from the promise, and "It Worked"
+  // when rejected call the itFailed function
+  //    display message passed from the promise, and "It failed"
+
+  function itWorked (data){
+    console.info(data + ': It worked');
+  }
+
+  function itFailed(err){
+    console.info(err + ': It failed');
+  }
+
+  sometimesWorks().then(itWorked, itFailed);
+  console.info('Back from promise land again.');
+
 }());

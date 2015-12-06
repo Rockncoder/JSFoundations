@@ -30,8 +30,15 @@
       });
   }
 
+  function success(data){
+
+  }
+
   // call the http get method -> you will probably need to allow cross-origin support
-  httpGet('http://fast-ocean-4426.herokuapp.com/api/quiz').then(
+
+  var myPromise = httpGet('http://fast-ocean-4426.herokuapp.com/api/quiz');
+
+  myPromise["then"](
     // if it is successful, it will come here
     function (data) {
       console.info(JSON.stringify(data));
@@ -41,5 +48,6 @@
       console.error(err);
     }
   );
+  console.info("Back from promise land");
 
 }());

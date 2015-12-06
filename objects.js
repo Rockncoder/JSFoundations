@@ -78,6 +78,7 @@
   };
 
 
+  var obj = new Object(null);
   debugger;
 
 

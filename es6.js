@@ -88,7 +88,7 @@ this is line #2.`);
 
   // Default values
   // we can now give functions parameters default values
-  var add = (x=1, y=2) => x + y;
+  var add = (x = 1, y = 2) => x + y;
   console.info(add(10));
 
   // Destructuring
@@ -126,14 +126,10 @@ this is line #2.`);
   // Classes
   // Modules
 
+  console.info("*******************************************");
+  var byFives = Array.from({length: 39}, (elem, index) => (index + 1) * 5);
+  console.info(byFives);
+  console.info("*******************************************");
 
-  // Array methods part 2
-  // Destructuring
-  // Maps
-  // Sets
-  // Promises
-  // Symbols
-  // Classes
-  // Modules
 
 }());

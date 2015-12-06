@@ -87,6 +87,23 @@
   console.log("Bob's weeks = " + weeks);
 
 
+  // rewrite the sum function to convert the arguments list
+  // to an array, then filter the array to only include number
+  // then sum the numbers
+  // call the function coolSum
+  // hint #1: Array.from
+
+  function coolSum() {
+    var args = Array.from(arguments).filter((elem) => typeof elem === 'number');
+    return args.reduce((previous, current) => previous + current, 0);
+
+//    return Array.from(arguments).filter((elem) => typeof elem === 'number').reduce((previous, current) => previous + current, 0);
+  }
+
+  console.info("*******************************************");
+  console.info('Total = ' + coolSum(5, 10, 15, 20, 'hippo', 'rhino', 50));
+  console.info('Total = ' + coolSum(null));
+
   // return values from function
 
 
@@ -135,7 +152,9 @@
   });
 
   var mod6b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
-    (elem) => { return elem % 6}
+    (elem) => {
+      return elem % 6
+    }
   );
 
   console.log(mod6);

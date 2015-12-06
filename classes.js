@@ -1,5 +1,8 @@
 // constructor pattern example
 
+// when we say, new Vehicle
+// the new operator creates a empty object, {}
+// and passes to the this of the function
 function Vehicle(name, numOfWheels, numOfCylinders){
   this.name = name;
   this.numOfWheels = numOfWheels;

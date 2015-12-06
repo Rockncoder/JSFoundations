@@ -12,7 +12,7 @@
     return new Promise(
       function (resolve, reject) {
         // number of milliseconds to delay
-        let delay = getRandomNum(1000, 5000);
+        let delay = getRandomNum(1000, 3000);
         // whether it is successful or not
         let worked = !!Math.floor(getRandomNum(0, 2));
 

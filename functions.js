@@ -115,5 +115,43 @@
   // first create a modulo function factory
   // then create an isEven function from it
 
+  function moduloMaker(num) {
+    return function (x) {
+      return (x % num) === 0;
+    }
+  }
+
+  var isEven = moduloMaker(2);
+  [1, 2, 3, 4, 5, 6, 7, 8].forEach(function (elem) {
+    console.info("Is even " + elem + " = " + isEven(elem));
+  });
+
+  [1, 2, 3, 4, 5, 6, 7, 8].forEach(
+    (elem) => console.info("Is even " + elem + " = " + isEven(elem))
+  );
+
+  var mod6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(function (elem) {
+    return elem % 6;
+  });
+
+  var mod6b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
+    (elem) => { return elem % 6}
+  );
+
+  console.log(mod6);
+
 
 }());
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-// array example
+// array examples
 
 (function () {
   'use strict';

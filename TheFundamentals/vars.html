@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  // since we are not in a function, both bob and joe are scoped globally
+
+
+  bob = "Hello Bob";
+  var joe = "Hello Joe";
+  console.info(bob);
+  console.info(joe);
+
+  function scope() {
+    var sally = "Hello Sally";
+    var jane;   // jane is declared, but not defined, has valued undefined
+    var alpha = 1, beta = 2, delta = 3; // can use comma to do multiple declarations
+    sam = "Hello Sam";  // sam is defined global since var is omitted
+
+    console.info(sally);
+    console.info("Jane says " + jane);
+    bob = "Goodbye Bob";
+    console.info(bob);
+  }
+  scope();
+  console.info(bob);
+  // the line below is an error
+  // console.info(sally);
+
+
+</script>
+
+</body>
+</html>

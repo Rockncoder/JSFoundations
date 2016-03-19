@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var bob = "Hi Bob";
+    console.info(this.bob);
+    var elements = [1,2,3,4,5,6,7];
+
+    function scope(){
+      'use strict';
+      // following line will generate an error
+      // console.info(this.bob);
+    }
+
+    scope();
+    var total = elements.reduce(function(previousValue, currentValue){
+      return previousValue + currentValue;
+    }, 0);
+    console.info("total = " + total);
+
+  </script>
+</body>
+</html>

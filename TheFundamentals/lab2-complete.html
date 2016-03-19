@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  function dice() {
+    var rnd = Math.floor(Math.random() * 6 + 1);
+    return rnd;
+  }
+
+  var ndx;
+  for (ndx = 0; ndx < 100; ndx++) {
+    console.info(ndx + ": " + dice());
+  }
+</script>
+
+</body>
+</html>

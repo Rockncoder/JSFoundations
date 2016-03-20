@@ -33,7 +33,7 @@
   function printObj(obj) {
     for (key in obj) {
       val = obj[key];
-      console.info(key + ' = ' + val.concat('!'));
+      console.info(key + ' = ' + val);
     }
   }
 
@@ -46,4 +46,25 @@
 
   // why does this function call fail now?
   printObj(myObj);
+
+  JSON.stringify(myObj);
+
+  console.info("For Loop");
+  for (ndx = 0; ndx < 21; ndx += 2) {
+    console.info(ndx);
+  }
+
+
+  console.info("While Loop");
+  ndx = 10
+  while (ndx >= 1) {
+    console.info(ndx);
+    ndx -= 1;
+  }
+
 }());
+
+
+// lab: write a for loop to print the numbers 0 to 20 by two
+
+// lab: write a while loop to print the 10 to 1 decrementing down

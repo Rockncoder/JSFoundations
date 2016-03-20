@@ -3,6 +3,7 @@
 (function () {
   'use strict';
 
+
   var arr1 = [1, 2, 3, 4];
   var obj1 = {
     show1a: function () {
@@ -20,13 +21,11 @@
   }
 
   function sum() {
-    if (arguments.length > 0) {
-      foo.apply({money: "$999"}, arguments);
-    }
     var ndx, sum = 0;
     for (ndx = 0; ndx < arguments.length; ndx += 1) {
-      if (typeof arguments[ndx] === 'number') {
-        sum += arguments[ndx];
+      var val = arguments[ndx];
+      if (typeof val === 'number' && !(val % 2)) {
+        sum += val;
       }
     }
     return sum;
@@ -36,10 +35,11 @@
     console.info("Hello arr1 show");
   };
 
-  function Point(x, y) {
+  function Point(x, y, func) {
     // this is a context which refers
     this.x = x;
     this.y = y;
+    this.speak = func;
   }
 
   Point.prototype.calc = function () {
@@ -66,7 +66,20 @@
 
   show1();        // invoke as a function
   obj1.show1a(); // invoke as a method
-  var myPoint = new Point(50, 100); // constructor
+  var myPoint = new Point(50, 100, function () {
+    console.info("Bananas are tasty");
+  }); // constructor
+  var myPoint2 = new Point(50, 100, function () {
+    console.info("Apples are better");
+  }); // constructor
+
+  function generalSpeak() {
+    console.info("Eat lots of veggies");
+  }
+
+  var myPoint3 = new Point(5, 1000, generalSpeak); // constructor
+  var myPoint4 = new Point(550, 750, generalSpeak); // constructor
+
 
   // using call and apply
   // call takes a "this" and parameters to pass
@@ -74,11 +87,13 @@
 
   // apply takes a "this" and
   var arr2 = ["mango", "durazno"];
-  foo.apply({money: "$100"}, arr2);
+  foo.apply({money: "$999"}, arr2);
 
   // the this context and arguments
   var total = sum(10, 20, 30, 40, 100);
   console.info("Total = " + total);
+  var total2 = sum(false, 10, 20, "banana", 30, 40, 100, {}, [10, 20, 30]);
+  console.info("Total = " + total2);
 
   // sidebar: the default operator
   var bob = 13;
@@ -97,12 +112,21 @@
     var args = Array.from(arguments).filter((elem) => typeof elem === 'number');
     return args.reduce((previous, current) => previous + current, 0);
 
-//    return Array.from(arguments).filter((elem) => typeof elem === 'number').reduce((previous, current) => previous + current, 0);
+    // return Array.from(arguments)
+    //   .filter((elem) => typeof elem === 'number')
+    //   .reduce((previous, current) => previous + current, 0);
   }
+
+  function coolSumEvensOnly() {
+    return Array.from(arguments).
+    filter((elem) => typeof elem === 'number' && !(elem % 2)).
+    reduce((previous, current) => previous + current, 0);
+  }
+
 
   console.info("*******************************************");
   console.info('Total = ' + coolSum(5, 10, 15, 20, 'hippo', 'rhino', 50));
-  console.info('Total = ' + coolSum(null));
+  console.info('Total = ' + coolSum());
 
   // return values from function
 

@@ -10,6 +10,18 @@
 
   // write your solution here
 
+  function millisecondsToDays(milli) {
+    var milliPerDay = 24 * 60 * 60 * 1000;
+    return Math.floor(milli / milliPerDay);
+  }
+
+  console.info("Days since 1/1/1970 = " + millisecondsToDays(Date.now()));
+
+  var bob = "Robert Smith";
+  var rob = bob.substr(0,3);
+
+
+
 </script>
 
 </body>

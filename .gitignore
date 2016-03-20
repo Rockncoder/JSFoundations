@@ -31,7 +31,7 @@ node_modules
 # Created by .ignore support plugin (hsz.mobi)
 uploads
 public/uploads
-.idea
+#.idea
 
 public/pdfs
 

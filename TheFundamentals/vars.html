@@ -13,11 +13,15 @@
   var joe = "Hello Joe";
   console.info(bob);
   console.info(joe);
+  debugger;
 
   function scope() {
+    "use strict";
+
     var sally = "Hello Sally";
     var jane;   // jane is declared, but not defined, has valued undefined
-    var alpha = 1, beta = 2, delta = 3; // can use comma to do multiple declarations
+    var alpha = 1, beta = 2,
+      delta = 3; // can use comma to do multiple declarations
     sam = "Hello Sam";  // sam is defined global since var is omitted
 
     console.info(sally);
@@ -29,6 +33,31 @@
   console.info(bob);
   // the line below is an error
   // console.info(sally);
+
+  function types() {
+    var numbers = new Array();
+    numbers[0] = 52;
+    numbers[1] = 100;
+
+    var numbers2 = [52, 100];
+
+//    var score = new Number(0);
+    var score = 0;
+
+
+
+
+    if(numbers[0] === numbers[1]) {
+      scope();
+    }
+
+
+
+  }
+
+
+
+  types();
 
 
 </script>

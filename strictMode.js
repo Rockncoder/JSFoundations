@@ -1,5 +1,5 @@
 // strict mode example
-'use strict';
+//'use strict';
 
 
 // unintentional global creation
@@ -7,7 +7,7 @@
 
 // this is a function constructor
 function Point(x, y){
-//  bob = "monocles";
+  bob = "monocles";
   this.x = x;
   this.y = y;
 }
@@ -20,4 +20,4 @@ function sameParams(param1, param1){
   console.log('Should be an error in the parameters');
 }
 
-// question: Why is the dupe parameter error found before the 'new' error, when both enabled?
+console.info("x = " + myPoint.x);

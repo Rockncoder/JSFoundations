@@ -30,4 +30,4 @@ console.info('The count is ' + myApi.counter());
 
 console.info('The count is ' + myApi.counter());
 
-// create or add to the
+// lab: create or add to the

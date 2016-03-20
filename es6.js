@@ -45,7 +45,7 @@ this is line #2.`);
   const name = 'Troy';
   console.info(`My name is ${name}`);
   // the line below triggers a type error
-  name = 'Miles';
+  // name = 'Miles';
 
 
   // array.from

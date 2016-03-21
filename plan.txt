@@ -17,7 +17,7 @@
 //null
 //Performing Data Conversions
 //Equality operators
-Using Strict Mode
+//Using Strict Mode
 //Working with JavaScript Operators
 Arithmetic Operators
 Assignment Operators
@@ -29,84 +29,85 @@ Assignment Operators
 //General Syntax
 //Calling Functions
 //Passing Arguments to Functions
-Returning Values from Functions
-Scope of Variables
-Named and Anonymous Functions
+//Returning Values from Functions
+//Scope of Variables
+//Named and Anonymous Functions
 //The this Keyword
 //Explaining Closures
-Callbacks
-Recursion
-Built-in Functions
+//Callbacks
+//Recursion
+//Built-in Functions
 //Number(object)
 //String(object)
 //isNaN(object)
 //parseFloat() and parseInt()
-Built-in Functions vs. Methods
+//Built-in Functions vs. Methods
 
 4 Controlling Program Flow
-Conditional Constructs
-if else
-switch
+//Conditional Constructs
+//if else
+//switch
 //Looping Constructs
 //do while
 //while
 //for
 //for in
-Branching Statements
-break
-continue
-Equality and Identity Operators
-Logical and Comparison Operators
+//Branching Statements
+//break
+//continue
+//Equality and Identity Operators
+//Logical and Comparison Operators
 
-
+1:00 - 2:00
 5 Object-Oriented Programming
-What Is Object-Oriented Programming?
-Object Creation
-Extending and Inheriting Objects Using prototype
-Class Inheritance vs. Prototypal Inheritance
-Encapsulation
+//What Is Object-Oriented Programming?
+//Object Creation
+//Extending and Inheriting Objects Using prototype
+//Class Inheritance vs. Prototypal Inheritance
+//Encapsulation
 
 6 Working with JavaScript Objects
     and JSON
 
+//Understanding Objects
+//Defining Custom Objects
+//Object Literal Notation
+//Dot Notation
+//Square Bracket Notation
+//Defining Properties and Methods
+//Creating a Constructor
+//Extending an Existing Object with prototype
+//Using the for/in and instanceof Operators
+//Overview of JSON
+//Using JSON.stringify and JSON.parse
 
-Understanding Objects
-Defining Custom Objects
-Object Literal Notation
-Dot Notation
-Square Bracket Notation
-Defining Properties and Methods
-Creating a Constructor
-Extending an Existing Object with prototype
-Using the in and instance of Operators
-Overview of JSON
-Using JSON.stringify and JSON.parse
-
-
+2:00 - 3:00
 7 Functional programming in Javascript
 
-Map
-Filter
-Reduce
-Call
-Apply
+//Map
+//Filter
+//Reduce
+//Call
+//Apply
 --Utility libs: lodash
-Callbacks and Async Programming
+//Callbacks and Async Programming
+//recursion
 
+3:00 - 3:30
 8 Good Coding Practice
-Writing Readable and Maintainable Code
-Module pattern
+//Writing Readable and Maintainable Code
+//Module pattern
 ---Unobtrusive JavaScript
-Feature Detection
-Handling Errors Well
+//Feature Detection aka property sniffing
+//Handling Errors Well
 
-
+3:30 - 5:00
 9 ECMAScript 6 Overview
 ECMAScript 6 tools that let you use it today!
 Key ECMAScript Features
-Arrow Functions
-Template Strings
-Defining Classes
+//Arrow Functions
+//Template Strings
+//Defining Classes
 Destructuring
 Maps and Sets
 

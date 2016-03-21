@@ -1,4 +1,13 @@
 //
+"use strict";
+
+function delMe (){
+
+  console.info("Hello delMe");
+}
+
+delMe();
+
 
 (function () {
   'use strict';
@@ -14,7 +23,7 @@
 
   var url = "http://www.kbb.com/sss/ttt?search=challenger";
   // this is identical to...
-  var obj1 = new Object(); // = {};
+  var obj1 = {};
   // this but this is preferred due to its simplicity
   var obj2 = {
     // only access with bracket notation
@@ -24,13 +33,13 @@
     },
     // can access with either dot or bracket
     sayHello: function (name) {
+
       console.info("Hello " + name + ", alpha = " + this.alpha);
     },
     alpha: 1,
     beta: 2
   };
 
-  console.info(JSON.stringify(obj2[url]));
 
   // we can augment objects dynamically
   // here we use bracket notation
@@ -86,4 +95,34 @@
     }
   }
 
+  var obj2String = JSON.stringify(obj2);
+  console.info(obj2String);
+  var newObj = JSON.parse(obj2String);
+  console.info(newObj.alpha);
+
+  console.info('*************************************');
+  function extend(dst, src){
+    var srcKey, srcVal;
+
+    for (srcKey in src) {
+      srcVal = src[srcKey];
+      if (src.hasOwnProperty(srcKey) && typeof dst[srcKey] === "undefined") {
+        dst[srcKey] = srcVal;
+      }
+    }
+  }
+
+  var obj4 = object({alpha: 0, beta: "0"});
+  extend(obj4, obj2);
+
+  console.info('*************************************');
+  console.info(JSON.stringify(obj4));
+
 }());
+
+// lab: create extend(dst, src);
+// copy the owned properties from the source to the destination
+// don't copy a property if it already exists on the destination
+// copy the properties on the source that the destination doesn't have
+// clue: there is one minor trap to work around
+

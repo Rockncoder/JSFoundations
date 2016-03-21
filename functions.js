@@ -128,6 +128,14 @@
   console.info('Total = ' + coolSum(5, 10, 15, 20, 'hippo', 'rhino', 50));
   console.info('Total = ' + coolSum());
 
+
+  coolSumEvensOnly.speak = function(){
+    console.log("JavaScript is fun");
+  }
+
+  var temp = "speak";
+  coolSumEvensOnly[temp]();
+
   // return values from function
 
 
@@ -183,6 +191,10 @@
 
   console.log(mod6);
 
+
+  arr1.count = 0;
+  arr1.speak = coolSumEvensOnly.speak;
+  arr1.speak();
 
 }());
 

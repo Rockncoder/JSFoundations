@@ -49,10 +49,6 @@
 
   JSON.stringify(myObj);
 
-  console.info("For Loop");
-  for (ndx = 0; ndx < 21; ndx += 2) {
-    console.info(ndx);
-  }
 
 
   console.info("While Loop");
@@ -60,6 +56,14 @@
   while (ndx >= 1) {
     console.info(ndx);
     ndx -= 1;
+  }
+  
+  console.info("\n\nFor Loop");
+  for (ndx = 0; ndx < 21; ndx += 2) {
+    if(ndx === 6){
+      continue;
+    }
+    console.info(ndx);
   }
 
 }());

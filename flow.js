@@ -7,7 +7,9 @@
   var sandwichObj = {
     "pb&j": 1.00,
     "ham": 2.50,
-    "tuna": 1.50
+    "tuna": 1.50,
+    "turkey": 3,
+    "roast beef": 4.5
   };
 
   function getSandwichPrice4(sandwich) {
@@ -70,8 +72,10 @@
   }
 
 
-  sandwich = "turkey";
+  sandwich = "roast beef";
   console.info("Your " + sandwich + " costs = $" + getSandwichPrice4(sandwich).toFixed(2))
 
 
 }());
+
+// lab: add two more sandwiches, turkey for 3.00, and roast beef for 4.50

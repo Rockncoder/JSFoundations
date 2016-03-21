@@ -12,7 +12,7 @@
         // create a new http request object
         let request = new XMLHttpRequest();
         // add a listener to monitor it
-        request.addEventListener('load', function() {
+        request.addEventListener('load', function () {
           // status = 200, means all is ok
           if (this.status === 200) {
             resolve(this.response);
@@ -30,15 +30,13 @@
       });
   }
 
-  function success(data){
+  function success(data) {
 
   }
 
   // call the http get method -> you will probably need to allow cross-origin support
 
-  var myPromise = httpGet('http://fast-ocean-4426.herokuapp.com/api/quiz');
-
-  myPromise["then"](
+  httpGet('http://fast-ocean-4426.herokuapp.com/api/quiz').then(
     // if it is successful, it will come here
     function (data) {
       console.info(JSON.stringify(data));
@@ -48,6 +46,21 @@
       console.error(err);
     }
   );
-  console.info("Back from promise land");
+  console.info("#######################################");
+
+
+  // var myPromise = httpGet('http://fast-ocean-4426.herokuapp.com/api/quiz');
+  //
+  // myPromise["then"](
+  //   // if it is successful, it will come here
+  //   function (data) {
+  //     console.info(JSON.stringify(data));
+  //   },
+  //   // if it fails it will come here
+  //   function (err) {
+  //     console.error(err);
+  //   }
+  // );
+  // console.info("Back from promise land");
 
 }());

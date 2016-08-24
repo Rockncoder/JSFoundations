@@ -1,5 +1,5 @@
 // strict mode example
-//'use strict';
+'use strict';
 
 
 // unintentional global creation

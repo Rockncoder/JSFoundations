@@ -36,22 +36,22 @@
     var name = 'Troy';
     console.info("My name is " + name);
     // the line below triggers a type error
-    // name = 'Miles';
+    //name = 'Miles';
     // array.from
     // array.from has a lot of different uses
     // create an array from - supply the length in an object and arrow
     // like other array method it is passed an element and an index, but element is undefined
-    // var instantArr = Array.from({length: 20}, (elem, index) => index + 1);
+    // let instantArr = Array.from({length: 20}, (elem, index) => index + 1);
     // console.info(instantArr);
     // make an array from a string
-    // var pirateArray = Array.from("happy pirates");
+    // let pirateArray = Array.from("happy pirates");
     // console.info(pirateArray);
-    // for of lets us iterate over an array
+    //
+    // // for of lets us iterate over an array
     // for (let elem of pirateArray) {
     //   console.info(elem);
     // }
     //
-    // // Chrome can't handle this
     // // if we want the element and its index we can get it too
     // for (let [index, elem] of pirateArray.entries()) {
     //   if (index === 5) {
@@ -80,7 +80,7 @@
     // allows us to extract values from objects and arrays
     // destructuring an object
     {
-        var obj = { firstName: 'TroyAnthony', lastName: 'Miles' };
+        var obj = { firstName: 'Troy', lastName: 'Miles' };
         var f = obj.firstName, l = obj.lastName;
         console.info("My names is: " + f + " " + l);
     }
@@ -88,32 +88,6 @@
     // {
     //   let [firstLetter, secondLetter] = pirateArray;
     //   console.info(`First letter = ${firstLetter}, second letter = ${secondLetter}`);
-    // }
-    // Maps
-    // maps are conceptually similar to objects but with a few differences
-    // an object has default keys from its prototype, a map does not
-    // keys of an object can be either strings or symbols, for a map they can be any value
-    // maps have a size property
-    // Template Strings
-    // Arrow/lambda functions
-    // let
-    // const
-    // Array methods part 2
-    // Default values
-    // Destructuring
-    // Symbols
-    // Maps
-    // Sets
-    // Promises
-    // Classes
-    // Modules
-    console.info("*******************************************");
-    // var byFives = Array.from({length: 39}, (elem, index) => (index + 1) * 5);
-    // console.info(byFives);
-    console.info("*******************************************");
-    // var ndx = 1;
-    // for (ndx = 1; ndx <= 10; ndx + 1) {
-    //     (function (ndx) { return console.info(ndx); })(ndx);
     // }
 }());
 // lab: count from 1 to 10 in a loop use an arrow function to render to the console. 

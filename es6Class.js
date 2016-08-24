@@ -22,7 +22,6 @@ class Mammal extends Animal {
     this.legs = 4;
     this.says = sound;
   }
-
   speak() {
     console.info(`My ${this.name} says ${this.says}`);
   }

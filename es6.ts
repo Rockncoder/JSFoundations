@@ -6,13 +6,13 @@
   // Template Strings
   // a template string is indicated by the use of enclosing backticks ` and ${}
   // the ${} is a template and the value of the expression inside of it replaces the template
-  var state = 'California';
-  var city = 'Long Beach';
+  let state = 'California';
+  let city = 'Long Beach';
   console.info(`This weekend's workshop is in ${city}, ${state}.`);
 
   // template strings can run simple expressions like addition
-  var cup_coffee = 4.5;
-  var cup_tea = 2.5;
+  let cup_coffee = 4.5;
+  let cup_tea = 2.5;
   console.info(`coffee: $${cup_coffee} + tea: $${cup_tea} = $${cup_coffee + cup_tea}.`);
 
   // they can allow us to create multi-line strings
@@ -21,12 +21,12 @@ this is line #2.`);
 
   // Arrow/lambda functions
   // arrow functions are syntactic sugar for the anonymous function you already know and love
-  var anon_func = function (num1, num2) {
+  let anon_func = function (num1, num2) {
     return num1 + num2;
   };
   console.info(`Anonymous func: ${anon_func(1, 2)}`);
 
-  var arrow_func = (num1, num2) => num1 + num2;
+  let arrow_func = (num1, num2) => num1 + num2;
   console.info(`Arrow func: ${arrow_func(3, 4)}`);
 
   // let
@@ -45,7 +45,7 @@ this is line #2.`);
   const name = 'Troy';
   console.info(`My name is ${name}`);
   // the line below triggers a type error
-  // name = 'Miles';
+  //name = 'Miles';
 
 
   // array.from
@@ -54,19 +54,18 @@ this is line #2.`);
 
   // create an array from - supply the length in an object and arrow
   // like other array method it is passed an element and an index, but element is undefined
-  // var instantArr = Array.from({length: 20}, (elem, index) => index + 1);
+  // let instantArr = Array.from({length: 20}, (elem, index) => index + 1);
   // console.info(instantArr);
 
   // make an array from a string
-  // var pirateArray = Array.from("happy pirates");
+  // let pirateArray = Array.from("happy pirates");
   // console.info(pirateArray);
-
-  // for of lets us iterate over an array
+  //
+  // // for of lets us iterate over an array
   // for (let elem of pirateArray) {
   //   console.info(elem);
   // }
   //
-  // // Chrome can't handle this
   // // if we want the element and its index we can get it too
   // for (let [index, elem] of pirateArray.entries()) {
   //   if (index === 5) {
@@ -88,7 +87,7 @@ this is line #2.`);
 
   // Default values
   // we can now give functions parameters default values
-  var add = (x = 1, y = 2) => x + y;
+  let add = (x = 1, y = 2) => x + y;
   console.info(add(10));
 
   // Destructuring
@@ -100,42 +99,12 @@ this is line #2.`);
     let {firstName: f, lastName: l} = obj;
     console.info(`My names is: ${f} ${l}`); 
   }
+
   //
   // {
   //   let [firstLetter, secondLetter] = pirateArray;
   //   console.info(`First letter = ${firstLetter}, second letter = ${secondLetter}`);
   // }
-
-  // Maps
-  // maps are conceptually similar to objects but with a few differences
-  // an object has default keys from its prototype, a map does not
-  // keys of an object can be either strings or symbols, for a map they can be any value
-  // maps have a size property
-
-  // Template Strings
-  // Arrow/lambda functions
-  // let
-  // const
-  // Array methods part 2
-  // Default values
-  // Destructuring
-  // Symbols
-  // Maps
-  // Sets
-  // Promises
-  // Classes
-  // Modules
-
-  console.info("*******************************************");
-  // var byFives = Array.from({length: 39}, (elem, index) => (index + 1) * 5);
-  // console.info(byFives);
-  console.info("*******************************************");
-
-  var ndx=1;
-  for(ndx=1; ndx <= 10; ndx +1){
-    ((ndx) => console.info(ndx))(ndx);
-  }
-
 
 }());
 

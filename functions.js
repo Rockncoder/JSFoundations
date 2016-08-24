@@ -24,7 +24,7 @@
     var ndx, sum = 0;
     for (ndx = 0; ndx < arguments.length; ndx += 1) {
       var val = arguments[ndx];
-      if (typeof val === 'number' && !(val % 2)) {
+      if (typeof val === 'number') {
         sum += val;
       }
     }
@@ -89,6 +89,9 @@
   var arr2 = ["mango", "durazno"];
   foo.apply({money: "$999"}, arr2);
 
+  var newFunc = foo.bind({money: "$1000"});
+  newFunc("plum", "peach");
+
   // the this context and arguments
   var total = sum(10, 20, 30, 40, 100);
   console.info("Total = " + total);
@@ -118,9 +121,7 @@
   }
 
   function coolSumEvensOnly() {
-    return Array.from(arguments).
-    filter((elem) => typeof elem === 'number' && !(elem % 2)).
-    reduce((previous, current) => previous + current, 0);
+    return Array.from(arguments).filter((elem) => typeof elem === 'number' && !(elem % 2)).reduce((previous, current) => previous + current, 0);
   }
 
 
@@ -129,7 +130,7 @@
   console.info('Total = ' + coolSum());
 
 
-  coolSumEvensOnly.speak = function(){
+  coolSumEvensOnly.speak = function () {
     console.log("JavaScript is fun");
   }
 

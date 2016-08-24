@@ -3,7 +3,7 @@
 (function () {
   'use strict';
 
-   var getRandomNum = (min, max) => Math.random() * (max - min) + min;
+  let getRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
   //
   function sometimesWorks() {
@@ -14,10 +14,10 @@
         // number of milliseconds to delay
         let delay = getRandomNum(1000, 3000);
 
-        setTimeout(function(){
-          // whether it is successful or not
-          let worked = !!Math.floor(getRandomNum(0, 2));
-          if(worked){
+        setTimeout(function () {
+          // 50/50 give me either 0 or 1, then convert to binary true/false
+          let worked = !!getRandomNum(0, 1);
+          if (worked) {
             resolve('It worked!');
           } else {
             reject('It failed');
@@ -29,32 +29,11 @@
   // call our function which returns a promise and sometimes works
   sometimesWorks().then(
     // if it is successful, it will come here
-    function (data) {
-      console.info(data);
-    },
+    (data) => console.info(data),
+
     // if it fails it will come here
-    function (err) {
-      console.info(err);
-    }
+    (err) => console.info(err)
   );
   console.info('Back from promise land');
-
-  // make another call to the sometimesWorks function
-  // create two named functions to pass to the promise object
-  // when successful call the itWorked function
-  //    display message passed from the promise, and "It Worked"
-  // when rejected call the itFailed function
-  //    display message passed from the promise, and "It failed"
-
-  function itWorked (data){
-    console.info(data + ': It worked');
-  }
-
-  function itFailed(err){
-    console.info(err + ': It failed');
-  }
-
-  sometimesWorks().then(itWorked, itFailed);
-  console.info('Back from promise land again.');
 
 }());
